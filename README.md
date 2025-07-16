@@ -14,6 +14,7 @@ This project implements a deep learning solution for classifying skin lesions us
 
 ## 📂 Project Structure
 
+```
 mi_proyecto_isic/
 ├── data/                       # Directory for raw and processed data (excluded from Git)
 │   └── README.md               # Instructions on how to download and set up the ISIC 2019 dataset
@@ -38,7 +39,7 @@ mi_proyecto_isic/
 ├── .gitignore                  # Specifies files/folders to exclude from Git
 ├── README.md                   # This file
 └── requirements.txt            # Python dependencies
-
+```
 
 ## 🚀 Getting Started
 
@@ -55,6 +56,7 @@ Follow these steps to set up the project locally and run the code.
 ```bash
 git clone https://github.com/JBuendia98/ISIC2019_TFM.git
 cd ISIC2019_TFM
+```
 
 ### 2. Set up Python Environment
 
