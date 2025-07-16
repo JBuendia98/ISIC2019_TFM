@@ -53,25 +53,25 @@ Follow these steps to set up the project locally and run the code.
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/your-username/mi_proyecto_isic.git](https://github.com/your-username/mi_proyecto_isic.git)
-cd mi_proyecto_isic
-(Remember to replace your-username with your actual GitHub username and mi_proyecto_isic with your repository name)
+git clone https://github.com/JBuendia98/ISIC2019_TFM.git
+cd ISIC2019_TFM
 
-2. Set up Python Environment
+### 2. Set up Python Environment
 
 It's recommended to use a virtual environment.
 
 Bash
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-3. Install Dependencies
+
+### 3. Install Dependencies
 
 Install all necessary Python packages:
 
 Bash
 pip install -r requirements.txt
 
-4. Download and Prepare the Dataset
+### 4. Download and Prepare the Dataset
 
 The ISIC 2019 Challenge Dataset is not included in this repository due to its substantial size and licensing. You need to download it separately from the official ISIC archive.
 
@@ -88,7 +88,7 @@ ISIC_2019_Training_Metadata.csv (Additional metadata for training)
 (Note: Validation and test data are also available, but this project focuses on training data for the local division.)
 
 
-5. Run Exploratory Data Analysis (EDA)
+### 5. Run Exploratory Data Analysis (EDA)
 
 Before training, you can explore the dataset characteristics using the provided Jupyter Notebook:
 
@@ -96,14 +96,14 @@ Bash
 jupyter notebook notebooks/EDA.ipynb
 Follow the cells in the notebook to understand class distribution, age/sex demographics, and image properties. Make sure to update the paths in EDA.ipynb from /kaggle/input/... to ../data/... for local execution.
 
-6. Compare and Select Models
+### 6. Compare and Select Models
 
 Execute the train_compare.py script to train and evaluate various pre-trained backbone models (e.g., ResNet, DenseNet, EfficientNet, ViT, Inception) on a subset of your data. This script helps in pre-selecting the best performing architecture for further fine-tuning. The best model checkpoint from this comparison will be saved in the models/ directory.
 
 Bash
 python src/train_compare.py
 
-7. Train the Model
+### 7. Train the Model
 
 Once the dataset is prepared and you've identified a suitable backbone (e.g., EfficientNet-B3, as suggested by the project title), you can train the chosen model. The train.py script will handle data loading, augmentation, and model training with class imbalance techniques. The best model checkpoint will be saved in the models/ directory.
 
@@ -111,13 +111,14 @@ Bash
 python src/train_final_model.py
 (Note: Training can take a significant amount of time depending on your hardware.)
 
-8. Evaluate the Model
+### 8. Evaluate the Model
 
 After training, evaluate the model's performance on the test set using the evaluate.py script. This will print detailed metrics (Classification Report, Confusion Matrix, etc.) to the console.
 
 Bash
 python src/evaluate.py
-9. Run the Gradio Web Application
+
+### 9. Run the Gradio Web Application
 
 Launch the interactive web application to perform real-time inference on new images and visualize Grad-CAM explanations.
 
