@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+Pillow
+tqdm
+torch>=1.8.0
+torchvision>=0.9.0
+pytorch_grad_cam
+gradio
